@@ -1,0 +1,56 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+---
+
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:py-6">
+    <div class="mx-auto text-center mb-8 lg:mb-16">
+        <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+            Rick and Morty 👽
+        </h2>
+        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+            All the information about Rick and Morty serie
+        </p>
+    </div>
+
+    <nav class="flex flex-col items.center justify-between w-full text-center md:flex-row">
+        <HeaderButton class="text-white" href="/">
+            <svg 
+                name="after"
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                stroke-width="2" 
+                stroke="currentColor" 
+                fill="none" 
+                stroke-linecap="round" 
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M16.95 9.01c3.02 .739 5.05 2.123 5.05 3.714c0 2.367 -4.48 4.276 -10 4.276s-10 -1.909 -10 -4.276c0 -1.59 2.04 -2.985 5.07 -3.724"></path>
+                <path d="M7 9c0 1.105 2.239 2 5 2s5 -.895 5 -2v-.035c0 -2.742 -2.239 -4.965 -5 -4.965s-5 2.223 -5 4.965v.035"></path>
+                <path d="M15 17l2 3"></path>
+                <path d="M8.5 17l-1.5 3"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M7 13h.01"></path>
+                <path d="M17 13h.01"></path>
+            </svg>
+            Characters
+        </HeaderButton>
+        <HeaderButton class="text-white" href="/about">
+            <svg 
+                slot="before" 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                stroke-width="2" stroke="currentColor" 
+                fill="none" 
+                stroke-linecap="round" 
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                <path d="M12 9h.01"></path>
+                <path d="M11 12h1v4h1"></path>
+            </svg>
+            About project
+        </HeaderButton>
+    </nav>
+</header>
