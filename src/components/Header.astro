@@ -15,7 +15,7 @@ import HeaderButton from "./HeaderButton.astro";
     <nav class="flex flex-col items.center justify-between w-full text-center md:flex-row">
         <HeaderButton class="text-white" href="/">
             <svg 
-                name="after"
+                slot="characters"
                 width="24" 
                 height="24" 
                 viewBox="0 0 24 24" 
@@ -37,7 +37,7 @@ import HeaderButton from "./HeaderButton.astro";
         </HeaderButton>
         <HeaderButton class="text-white" href="/about">
             <svg 
-                slot="before" 
+                slot="about" 
                 width="24" 
                 height="24" 
                 viewBox="0 0 24 24" 
