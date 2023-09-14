@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+    const datos = await fetch('https://rickandmortyapi.com/api/character')
+    const data = await datos.json()
+    const characters = data.results
+    
+    return characters.map((personaje) => ({
+        // recuperamos lo que se envía a través de la URL
+        params:{
+            id: personaje.id
+        },
+        props:{
+            personaje:personaje
+        }
+    }))
+}
+
+const {id, name, image, status, species, gender} = Astro.props.personaje
+---
+
+<Layout title={`Character ${name}`}`>
+    <article class="flex gap-y-4 flex-col">
+        <img class="w-52 h-auto" src={image} alt={name}>
+        <h2 class="text-4xl text-white font-bold">#{id} {' '} {name}</h2>
+        <p class="text-lg"><i>{status}</i></p>
+        <p class="text-lg">{species}</p>
+        <p class="text-lg">{gender}</p>
+    </article>
+</Layout>

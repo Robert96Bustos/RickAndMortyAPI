@@ -2,11 +2,11 @@
 
 const {personaje} = Astro.props
 console.log(personaje)
-const {id,name,species, image} = personaje
+const {id, name,species, image} = personaje
 ---
 
 <a 
-    href=`/character/${id}`
+    href=`/infocharacters/${id}`
     class="rounded-lg border shadow-md bg-gray-800 border-gray-700 
     hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
 >
